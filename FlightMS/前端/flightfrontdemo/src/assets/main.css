@@ -1,0 +1,162 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: #333;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+/* 页面过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 自定义Element Plus样式 */
+.el-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.el-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.el-button {
+  border-radius: 4px;
+}
+
+.el-table th {
+  background-color: #f5f7fa !important;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .el-form-item {
+    margin-bottom: 18px;
+  }
+  
+  .el-card__header {
+    padding: 12px 15px;
+  }
+  
+  .el-card__body {
+    padding: 15px;
+  }
+}
+
+/* 辅助类 */
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.text-primary {
+  color: #409EFF;
+}
+
+.text-success {
+  color: #67C23A;
+}
+
+.text-warning {
+  color: #E6A23C;
+}
+
+.text-danger {
+  color: #F56C6C;
+}
+
+.text-info {
+  color: #909399;
+}
+
+/* 科技感元素 */
+.tech-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(64, 158, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 6s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  to {
+    transform: translateX(100%) rotate(30deg);
+  }
+} 
