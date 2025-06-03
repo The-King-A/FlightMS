@@ -64,16 +64,6 @@ API风格：RESTful
 使用Vue 3的watch机制监听时间戳变化，实现自动刷新
 实现了统一的数据操作入口，确保所有CRUD操作都经过store执行
 // 数据更新通知机制
-notifyDataUpdated() {
-  this.lastUpdated = new Date()
-  this.listeners.forEach(callback => {
-    try {
-      callback()
-    } catch (error) {
-      console.error('更新监听器执行出错:', error)
-    }
-  })
-}
 2. 科技感UI设计与性能优化
 实现具有航空主题的科技感登录/注册界面，同时保证动画效果不影响系统性能。解决方案：
 使用CSS3高级动画特性（如transform、opacity过渡）
